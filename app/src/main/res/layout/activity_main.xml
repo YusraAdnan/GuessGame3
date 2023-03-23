@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#270D67"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="379dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:gravity="center"
+        android:text="Guess The Word"
+
+        android:textColor="#fff"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtCorrectAnswer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/txtCorrectAnswer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="94dp"
+        android:layout_marginBottom="17dp"
+        android:background="#C3B7C8"
+        android:padding="30dp"
+        android:visibility="invisible"
+        android:text="Correct Answer"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtRightAnswer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtRightAnswer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:background="#C3B7C8"
+        android:padding="30dp"
+        android:visibility="invisible"
+        android:text="Text View"
+        android:textAlignment="center"
+
+
+        android:textColor="#000"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cardView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCorrectAnswer" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="387dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="21dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRightAnswer">
+
+        <TextView
+            android:id="@+id/txtQuestionContainer"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:background="#C3B7C8"
+            android:padding="30dp"
+            android:text="Random Text"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="403dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginBottom="26dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnShow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+        <EditText
+            android:id="@+id/etUserInput"
+            android:layout_width="346dp"
+            android:layout_height="match_parent"
+
+            android:ems="10"
+            android:hint="Enter your Text"
+            android:padding="20dp"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnShow"
+        android:layout_width="104dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="19dp"
+        android:layout_weight="1"
+        android:background="#020202"
+        android:text="Show"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnCheck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView4"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_width="112dp"
+        android:layout_height="87dp"
+        android:layout_marginEnd="17dp"
+        android:layout_weight="1"
+        android:background="#000000"
+        android:text="Check"
+        android:textColor="#FFFFFF"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnNext"
+        app:layout_constraintStart_toEndOf="@+id/btnShow"
+        app:layout_constraintTop_toBottomOf="@+id/cardView4"
+        app:layout_constraintVertical_bias="0.603" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="108dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="96dp"
+        android:layout_weight="1"
+        android:background="#000000"
+        android:text="Next"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnCheck"
+        app:layout_constraintTop_toBottomOf="@+id/btnShow" />
+</androidx.constraintlayout.widget.ConstraintLayout>
